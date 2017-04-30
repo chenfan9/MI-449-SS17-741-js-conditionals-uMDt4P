@@ -58,9 +58,19 @@ if (userInput === null || userInput === undefined) {
       window.alert('OK, you got me. I lose.')
     }
   } else {
-    var answerNo = window.confirm('You sure?')
+    var answerNo = window.confirm('Well, since you didn\'t make a valid choice, let us try something else.')
     if (answerNo) {
-      window.alert('Looks like you make a invalid choice.')
+      var userAge = window.prompt('How old are you?')
+      userAge = parseInt(userAge)
+      if (userAge > 12) {
+        window.alert('Wow, Did you know that you are older than USARPS tournaments?')
+      } else if (userAge < 12) {
+        window.alert('Wow, Did you know that USARPS tournaments is older than you?')
+      } else if (userAge === 12) {
+        window.alert('Wow, you are the same age as the USARPS tournaments')
+      } else {
+        window.alert('Please give me a number.')
+      }
     }
   }
 }
