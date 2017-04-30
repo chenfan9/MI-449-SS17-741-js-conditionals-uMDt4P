@@ -1,11 +1,11 @@
 var userInput = window.prompt('Let\'s play Rock-paper-scissors, R for Rock, P for paper and S for scissors. Please make your choice.')
-userInput = userInput.toUpperCase()
 var randomOutput
-window.alert('Your chorce is ' + userInput)
 
 if (userInput === null || userInput === undefined) {
   window.alert('Looks like you make a invalid choice.')
 } else {
+  userInput = userInput.toUpperCase()
+  window.alert('Your chorce is ' + userInput)
   if (userInput === 'R') {
     var random = Math.random()
     if (random > 0 && random < 0.33) {
@@ -69,7 +69,7 @@ if (userInput === null || userInput === undefined) {
       } else if (userAge === 12) {
         window.alert('Wow, you are the same age as the USARPS tournaments')
       } else {
-        window.alert('Please give me a number.')
+        window.alert('Sorry, I got nothing, game over.')
       }
     }
   }
